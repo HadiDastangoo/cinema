@@ -1,0 +1,231 @@
+@charset "utf-8";
+
+@font-face {
+    font-family:"Vazirmatn";
+    src:url("./fonts/Vazirmatn[wght].woff2") format("woff2 supports variations"),
+        url("./fonts/Vazirmatn[wght].woff2") format("woff2-variations");
+    font-weight:100 900;
+    font-style:normal;
+    font-display:swap;
+}
+
+body {
+    font-family: "Vazirmatn",sans-serif;
+    background: #121212 url("./images/background.jpg") 0 0 repeat fixed; 
+    background-size: 600px 432px ;
+    color: #fff;
+}
+
+.glass {
+    background: rgba(255,255,255,.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,.1);
+}
+
+.search-box {
+    max-width: 600px;
+    margin: auto;
+}
+
+#results {
+    margin-top: 1rem;
+}
+
+.result-item {
+    cursor: pointer;
+    padding: 12px;
+    display: flex;
+    gap: 12px;
+    transition: .3s;
+    border-radius: 8px;
+    background: rgba(255,255,255,.5);
+}
+
+.result-item:hover {
+    background: rgba(255,255,255,.05);
+}
+
+.result-item img {
+    width: 90px;
+    height: 135px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.result-item h5 {
+    margin-bottom: 2px;
+    font-size: 1rem;
+}
+
+.result-item p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 4px;
+    font-size: .85rem;
+}
+
+.result-item small span {
+    background: rgba(75,0,130,.2);
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 4px;
+    font-size: .75rem;
+}
+
+.modal-content {
+    background: #121212;
+    border-radius: 20px;
+    color: #fff;
+    max-height: 90vh;
+    overflow-x: hidden;
+    padding: 1rem;
+}
+
+.modal-header-blur::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    filter: blur(12px) brightness(.5);
+    z-index: 0;
+    background-image: var(--img-url);
+}
+
+.modal-header-blur .info h3 {
+    margin: 0;
+}
+
+.btn-indigo,.modal-content {
+    position: relative;
+}
+
+.info-table td {
+    padding: .25rem .5rem;
+    vertical-align: top;
+}
+
+@media (max-width:768px) {
+    .result-item {
+        flex-direction: row;
+        align-items: start;
+    }
+
+    .result-item img {
+        width: 120px;
+        height: auto;
+    }
+}
+
+.close-modal-btn {
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    z-index: 10;
+}
+
+.film-icon {
+    transform: rotate(15deg);
+    transition: transform .5s ease;
+}
+
+a.site-title:hover .film-icon {
+    transform: rotate(375deg);
+}
+
+#detailContainer {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.modal-header-blur {
+    position: relative;
+    height: 220px;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+.modal-header-blur img {
+    width: 120px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.modal-header-blur .info {
+    margin-right: 1rem;
+    z-index: 1;
+}
+
+.btn-indigo {
+    border: 0;
+}
+
+.btn-indigo,.btn-indigo:hover {
+    background-color: #7532f9;
+    color: #fff;
+}
+
+.section-title {
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    font-size: 1rem;
+}
+
+.info-table {
+    width: 100%;
+    font-size: .85rem;
+}
+
+.more-link {
+    color: #b7a97e;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.download-btns {
+    display: flex;
+    gap: .25rem;
+    flex-wrap: wrap;
+    margin-bottom: .5rem;
+}
+
+.accordion-item {
+    background: rgba(255,255,255,.05);
+}
+
+.accordion-button {
+    background: rgba(0,0,0,.5);
+    color: #fff
+}
+
+.accordion-button:not(.collapsed) {
+    background: rgba(118,50,249,.3);
+    color: #fff;
+}
+
+.toast-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1050;
+}
+
+.toast {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
