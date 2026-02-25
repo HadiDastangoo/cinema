@@ -1,6 +1,6 @@
 <?php
 // تنظیمات هدر و توضیحات
-$SITE_TITLE = "سیـــنما";
+$SITE_TITLE = "• سیـــنما •";
 $SITE_DESC = "جستجو و دانلود رایگان فیلم و سریال خارجی";
 $SITE_URL = "https://max.imum.ir/cinema";
 $API_KEY = "4F5A9C3D9A86FA54EACEDDD635185";
